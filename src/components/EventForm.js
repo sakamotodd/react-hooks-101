@@ -1,15 +1,15 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
+import{CREATE_EVENT,DELETE_ALL_EVENT} from '../actions'
 
-
-const EventForm = ({state, dispatch}) => {
+const EventForm = ({ state, dispatch }) => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
 
   const addEvent = (e) => {
-      e.preventDefault();
+    e.preventDefault();
     //preventDefaultボタンなどをクリックした時に、画面遷移させたくない時使用
     dispatch({
-      type: 'CREATE_EVENT',
+      type: CREATE_EVENT,
       title,
       body,
     });
@@ -22,7 +22,7 @@ const EventForm = ({state, dispatch}) => {
     const result = window.confirm(
       '全てのイベントを本当に削除しても良いですか？'
     );
-    if (result) dispatch({ type: 'DELETE_ALL_EVENT' });
+    if (result) dispatch({ type: DELETE_ALL_EVENT });
   };
 
   const unCreatable = title === '' || body === '';
@@ -69,4 +69,4 @@ const EventForm = ({state, dispatch}) => {
     </React.Fragment>
   );
 };
-export default EventForm
+export default EventForm;
