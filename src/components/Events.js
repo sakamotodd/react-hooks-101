@@ -13,7 +13,7 @@ const Events = () => {
           <tr>
             <th>ID </th>
             <th>タイトル</th>
-            <th>ボディ</th>
+            <th>内容</th>
             <th></th>
           </tr>
         </thead>

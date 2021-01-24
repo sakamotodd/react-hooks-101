@@ -74,7 +74,7 @@ const EventForm = () => {
       </form>
       <form>
         <div className="form-group">
-          <label htmlFor="formEventBody">ボディー</label>
+          <label htmlFor="formEventBody">内容</label>
           <textarea
             className="form-control"
             id="formEventBody"
