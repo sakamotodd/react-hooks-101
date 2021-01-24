@@ -23,7 +23,7 @@ const EventForm = () => {
     });
     dispatch({
       type: ADD_OPERATION_LOG,
-      description: 'イベントを作成しました。',
+      description: 'メモを作成しました。',
       operateAt: timeCurrentIso8601(),
     });
     setTitle('');
@@ -33,13 +33,13 @@ const EventForm = () => {
   const deleteAllEvents = (e) => {
     e.preventDefault();
     const result = window.confirm(
-      '全てのイベントを本当に削除しても良いですか？'
+      '全てのメモを本当に削除しても良いですか？'
     );
     if (result) {
       dispatch({ type: DELETE_ALL_EVENT });
       dispatch({
         type: ADD_OPERATION_LOG,
-        description: '全てのイベントを削除しました。',
+        description: '全てのメモを削除しました。',
         operateAt: timeCurrentIso8601()
       });
     }
@@ -60,7 +60,7 @@ const EventForm = () => {
 
   return (
     <React.Fragment>
-      <h4>イベント作成フォーム</h4>
+      <h4>メモ作成フォーム</h4>
       <form>
         <div className="form-group">
           <label htmlFor="formEventTitle">タイトル</label>
@@ -87,14 +87,14 @@ const EventForm = () => {
           onClick={addEvent}
           disabled={unCreatable}
         >
-          イベントを作成する
+          メモを作成する
         </button>
         <button
           className="btn btn-danger"
           onClick={deleteAllEvents}
           disabled={state.events.length === 0}
         >
-          全てのイベントを削除する
+          全てのメモを削除する
         </button>
         <button
           className="btn btn-danger"

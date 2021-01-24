@@ -8,14 +8,14 @@ const Event = ({ event }) => {
   const id = event.id;
   const handleClickDeleteButton = () => {
     const result = window.confirm(
-      `メモ(id=${id})を本当に削除しても良いですか`
+      `メモ(ID=${id})を本当に削除しても良いですか`
     );
     if (result) {
       dispatch({ type: DELETE_EVENT, id });
 
       dispatch({
         type:ADD_OPERATION_LOG,
-        description:`メモ(id=${id})を削除しました。`,
+        description:`メモ(ID=${id})を削除しました。`,
         operateAt: timeCurrentIso8601()
       })
     }
