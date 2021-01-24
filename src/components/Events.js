@@ -7,7 +7,7 @@ const Events = () => {
   return (
     <>
   
-      <h4>イベント一覧</h4>
+      <h4>Memo</h4>
       <table className="table table-hover">
         <thead>
           <tr>
